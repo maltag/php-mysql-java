@@ -1,0 +1,824 @@
+body {
+	font-family: 'Teko', sans-serif;
+	background-color: #f2f0eb;
+	box-sizing: border-box;
+}
+
+/*Galeria HOME*/
+
+.container-gallery {
+	width: 90%;
+	max-width: 900px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+.galeria {
+	display: flex;
+	width: 600%;
+	height: 550px;
+	margin-left: -100%;
+}
+
+.imgGal {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.galeriaBtn {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	fill: rgb(255, 255, 255);
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+.galeriaBtn:hover {
+	background-color: rgb(255, 255, 255);
+}
+
+.btnIzq {
+	left: 20px;
+}
+
+.btnDer {
+	right: 20px;
+}
+
+/*Modo nocturno*/
+.oscuro,
+.oscuro a.nav-link,
+.oscuro a.nav-link.active,
+.oscuro a.navbar-brand {
+	background-color: #1f1f1f;
+	color: #f1eded;
+}
+
+.toggle-btn {
+	display: inline-block;
+	outline: 0;
+	width: 4em;
+	height: 2em;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	background: #535353;
+	border-radius: 2em;
+	padding: 2px;
+	transition: all 0.4s ease;
+	border: 1px solid #e8eae9;
+}
+.toggle-btn:focus::after,
+.toggle-btn:active::after {
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08),
+		inset 0px 0px 0px 1.5px #9c9c9c;
+}
+.toggle-btn::after {
+	left: 0;
+	position: relative;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	border-radius: 2em;
+	background: #464646;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+		padding 0.3s ease, margin 0.3s ease;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.toggle-btn.active::after {
+	left: 50%;
+}
+.toggle-btn.active {
+	background: #dadada;
+}
+.toggle-btn.active:active {
+	box-shadow: none;
+}
+.toggle-btn.active:active::after {
+	margin-left: -0.8em;
+}
+.toggle-btn:active::after {
+	padding-right: 0.8em;
+}
+.toggle-input {
+	display: none;
+}
+
+.titulo_site {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1, 5rem;
+}
+
+.tituloProyecto {
+	display: inline-flex;
+	flex-direction: row;
+
+	width: 100vw;
+} /*  vambiar a otros tamaños*/
+
+.tituloProyecto {
+	width: inherit;
+	max-width: contain;
+}
+/*----------------Formulario---------------------*/
+
+.form_elemento {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+	width: 100%;
+	max-width: 80pxform;
+}
+.form_elemento label {
+	display: inline-flex;
+	margin-bottom: 5px;
+}
+
+.form_elemento input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: flex;
+	padding: 10px;
+	width: 100%;
+}
+
+.form_elemento select {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: flex;
+	padding: 10px;
+	width: 100%;
+}
+
+.form_elemento.alert_ok input {
+	border-color: rgb(73, 177, 12);
+}
+.form_elemento.alert_error input {
+	border-color: crimson;
+}
+
+.form_elemento.alert_ok select {
+	border-color: rgb(73, 177, 12);
+}
+.form_elemento.alert_error select {
+	border-color: crimson;
+}
+
+.form_elemento i {
+	position: absolute;
+	top: 40px;
+	right: 10px;
+	visibility: hidden;
+}
+
+.form_elemento.alert_error i.bi-exclamation {
+	visibility: visible;
+	color: crimson;
+}
+.form_elemento.alert_ok i.bi-check {
+	visibility: visible;
+	color: rgb(73, 177, 12);
+}
+
+.form_elemento small {
+	visibility: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.form_elemento.alert_error small {
+	visibility: visible;
+	color: crimson;
+}
+
+.form_elemento button {
+	background-color: rgb(48, 174, 174);
+	border: 2px solid rgb(48, 174, 174);
+	border-radius: 4px;
+	color: #f0f0f0;
+	display: flex;
+	padding: 10px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.form_terms {
+	display: flex;
+	justify-content: space-evenly;
+	max-width: 300px;
+	align-items: center;
+}
+.form_terms input {
+	width: 16px;
+	height: 16px;
+}
+.form_terms label {
+	margin-bottom: 0px;
+}
+
+.imgForm01 {
+	align-self: flex-start;
+}
+
+/*----Juego-----*/
+
+.game-container {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	width: 306px;
+	margin: 50px auto;
+}
+
+.game-cell {
+	width: 100px;
+	height: 100px;
+	box-shadow: 0 0 0 1px #333333;
+	border: 1px solid #333333;
+	cursor: pointer;
+	line-height: 100px;
+	font-size: 60px;
+}
+
+/*  Small devices (landscape phones, 576px and up)*/
+@media (max-width: 540px) {
+	header nav {
+		font-family: 'Teko', sans-serif;
+		position: absolute;
+		width: 100%;
+		font-size: 18px;
+	}
+	.section_body {
+		height: calc(100vh - 134px);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.section_proy {
+		height: calc(100vh - 134px);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.container_proyecto {
+		display: flex;
+		flex-direction: inline-flex;
+		align-items: center;
+		text-align: center;
+		justify-content: left;
+	}
+	.tituloProyecto {
+		display: flex;
+		flex-direction: column;
+		text-align: justify;
+		align-content: center;
+		text-align: center;
+	}
+	.img_proyecto {
+		display: flex;
+		width: contain;
+	}
+	.cardsRegions {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+
+		align-items: center;
+		align-content: space-around;
+	}
+	.noaCard {
+		display: flex;
+		justify-content: flex-start;
+		align-content: space-around;
+		margin: 1rem;
+	}
+	.neaCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.cuyoCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.centroCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.pataCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.litoralCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+
+	.subtitulo_region {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2em;
+	}
+	.container-gallery {
+		width: 90%;
+		max-width: 900px;
+		margin: 0;
+		overflow: hidden;
+		position: relative;
+	}
+	.galeria {
+		display: flex;
+		width: 600%;
+		height: 190px;
+		margin-left: -100%;
+	}
+
+	.imgGal {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.galeriaBtn {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		fill: rgb(255, 255, 255);
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.galeriaBtn:hover {
+		background-color: rgb(255, 255, 255);
+	}
+
+	.btnIzq {
+		left: 20px;
+	}
+
+	.btnDer {
+		right: 20px;
+	}
+	/*--------Formulario*/
+	.container-formu {
+		width: 312px;
+	}
+
+	.img-fluid {
+		display: none;
+	}
+	.form {
+		max-width: inherit;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/* Medium devices (tablets, 720px o ++)*/
+
+@media (max-width: 720px) {
+	header nav {
+		font-family: 'Teko', sans-serif;
+		position: absolute;
+		width: 100%;
+		font-size: 18px;
+	}
+	.section_index {
+		height: calc(100vh - 134px);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.cardsRegions {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 1rem;
+		align-items: center;
+		align-content: flex-start;
+	}
+	.noaCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.neaCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.cuyoCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.centroCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.pataCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	.litoralCard {
+		justify-content: flex-start;
+		margin: 1rem;
+	}
+	/*--------Formulario*/
+	.img-fluid {
+		display: none;
+	}
+	.form {
+		max-width: inherit;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/* Large devices (desktops, 960px and up) */
+@media (min-width: 960px) {
+	header nav {
+		font-family: 'Teko', sans-serif;
+		position: absolute;
+		width: 100%;
+		font-size: 18px;
+	}
+	.section_index {
+		height: calc(100vh - 134px);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.container_proyecto {
+		display: flex;
+		flex-direction: inline-flex;
+		align-items: center;
+		text-align: center;
+		justify-content: left;
+	}
+	.tituloProyecto {
+		display: flex;
+		flex-direction: row;
+		text-align: justify;
+		align-content: center;
+		text-align: center;
+	}
+	.img_proyecto {
+		display: flex;
+		width: contain;
+	}
+	.cardsRegions {
+		display: inline-flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 1rem;
+		align-items: center;
+		align-content: flex-start;
+	}
+	.estilo_Card {
+		display: flex;
+		justify-content: flex-start;
+		margin: 1rem;
+		gap: 1rem;
+		width: 18rem;
+	}
+	.cardsRegions {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 1rem;
+		gap: 1rem;
+	}
+	/* cambia en otros dispositivos */
+	.card-text {
+		height: 48px;
+	}
+
+	/*--------Formulario*/
+	.form {
+		width: 180px;
+		height: 560px;
+	}
+	.subtitulo_region {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 2em;
+		gap: 2em;
+	}
+	.img01_region {
+		flex-grow: 1;
+		text-align: center;
+	}
+	.img01_region img {
+		width: 145px;
+		object-fit: contain;
+	}
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	header nav {
+		font-family: 'Teko', sans-serif;
+		position: absolute;
+		width: 100%;
+		font-size: 18px;
+	}
+	.section_index {
+		height: calc(100vh - 134px);
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.container_proyecto {
+		display: flex;
+		flex-direction: inline-flex;
+		align-items: center;
+		text-align: center;
+		justify-content: left;
+	}
+	.tituloProyecto {
+		display: flex;
+		flex-direction: column;
+		text-align: justify;
+		align-content: center;
+		text-align: center;
+	}
+	.img_proyecto {
+		display: flex;
+		width: contain;
+	}
+	.estilo_Card {
+		display: flex;
+		justify-content: flex-start;
+		margin: 1rem;
+		gap: 1rem;
+		width: 18rem;
+	}
+
+	.row_region {
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+	}
+	.cardsRegions {
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 5rem;
+	}
+
+	/*--------Formulario*/
+	.form {
+		width: 180px;
+		height: 560px;
+	}
+	/*REGIONES*/
+	.header_region {
+		display: inline-flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: stretch;
+		width: 100%;
+		height: 100%;
+	}
+	.subtitulo_region {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2em;
+	}
+	.titulo_region {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.img01_region {
+		float: left;
+		object-fit: cover;
+		width: 50%;
+		height: 100%;
+	}
+	.contexto_region {
+		float: right;
+	}
+	.obras_artistas_region {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 65%;
+	}
+	.artistas_region {
+		flex-direction: row;
+		padding: 2em;
+	}
+	/*Galeria Regiones*/
+
+	.galeria-item {
+		display: inline-flex;
+		flex-direction: column;
+	}
+	.espacios_region {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+/*  XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+	header nav {
+		font-family: 'Teko', sans-serif;
+		position: absolute;
+		width: 100%;
+		font-size: 18px;
+	}
+	.section_index {
+		height: calc(100vh - 134px);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.container_proyecto {
+		display: flex;
+		flex-direction: inline-flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+	}
+	.tituloProyecto {
+		display: flex;
+		flex-direction: row;
+		text-align: justify;
+		align-content: center;
+		text-align: center;
+	}
+	.img_proyecto {
+		display: flex;
+		width: contain;
+		align-items: center;
+		justify-content: end;
+	}
+	.estilo_Card {
+		display: flex;
+		justify-content: flex-start;
+		margin: 1rem;
+		gap: 1rem;
+		width: 18rem;
+	}
+
+	.row_region {
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+	}
+	.cardsRegions {
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 5rem;
+	}
+
+	/*---------------Formulario-------*/
+	.form {
+		width: 180px;
+		height: 560px;
+	}
+
+	/*------------------GaleriaHome---------*/
+
+	.container-gallery {
+		width: 90%;
+		max-width: 900px;
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+	}
+	.galeria {
+		display: flex;
+		width: 600%;
+		height: 550px;
+		margin-left: -100%;
+	}
+
+	.imgGal {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.galeriaBtn {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		fill: rgb(255, 255, 255);
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.galeriaBtn:hover {
+		background-color: rgb(255, 255, 255);
+	}
+
+	.btnIzq {
+		left: 20px;
+	}
+
+	.btnDer {
+		right: 20px;
+	}
+
+	/*Regiones*/
+
+	.header_region {
+		display: inline-flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: stretch;
+		width: 100%;
+		height: 100%;
+	}
+	.subtitulo_region {
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 2em;
+	}
+	.titulo_region {
+		flex-direction: row;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.img01_region {
+		display: flex;
+		float: left;
+		object-fit: cover;
+		width: 145px;
+		height: 235px;
+	}
+	.contexto {
+		display: flex;
+		float: right;
+		text-align: justify;
+		height: 235px;
+		align-items: center;
+		margin: 1.5em;
+	}
+
+	.obras_artistas_region {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 65%;
+	}
+	.artistas_region {
+		flex-direction: row;
+		padding: 2em;
+	}
+
+	.galeria-item {
+		display: inline-flex;
+		flex-direction: column;
+	}
+	.espacios_region {
+		display: flex;
+		justify-content: center;
+	}
+	.espacios_list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		list-style: none;
+	}
+	.espacios_list .espacios_items {
+		list-style: none;
+	}
+}
